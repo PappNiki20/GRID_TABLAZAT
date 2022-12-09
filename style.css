@@ -1,0 +1,155 @@
+body{
+    
+    background-image: url(kepek/hatter.jpg);
+    padding: 0;
+    margin: 0;
+}
+
+main{
+    display: grid;
+    grid-template-columns: 1fr 3fr 2fr;
+    grid-template-areas: "h h h "
+                          "n ar as"  
+                          "f f f"   
+    
+    ;
+    width: 80%;
+   
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    border-right: 1px solid gray;
+}
+header{
+    
+    text-align: center;
+    grid-area: h;
+    height: 150px;
+    color: white;
+    font-weight: bold;
+    background-image: url(kepek/fejlec.jpg);
+}
+header>h1{
+    padding-top: 50px;
+}
+article{
+    grid-area: ar;
+}
+table{
+    border-collapse: collapse;
+    width: 100%;
+    background-color: rgb(167, 230, 241);
+   
+}
+td,th{
+    border: 1px solid #ddd;
+    padding: 8px;
+    border-bottom: 3px solid rgb(135, 205, 238);
+
+}
+tr:nth-child(even){background-color: #f2f2f2;}
+aside{
+    grid-area: as;
+    border-top: 1px solid gray;
+    border-left: 1px solid gray;
+    padding: 35px;
+}
+aside>p{
+    text-align: justify;
+    margin: 5px;
+}
+footer{
+    grid-area: f;
+    background-color: rgb(48, 98, 155);
+}
+footer>p{
+    margin-inline: 5px;
+    text-align: center;
+    font-weight: bold;
+}
+nav {
+    grid-area: n;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    
+  }
+  li{
+    color: white;
+    margin: 3px;
+    background-color: rgb(48, 98, 155);
+    border: 1px solid rgb(48, 98, 155);
+    border-radius: 10px;
+  }
+  
+  li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+  }
+ 
+  li a.active {
+    background-color: #04AA6D;
+    color: white;
+  }
+  
+  li a:hover:not(.active) {
+    background-color: rgb(138, 186, 241);
+    color: white;
+  }
+  div.polaroid {
+    width: 284px;
+    padding: 10px 10px 20px 10px;
+    border: 1px solid #BFBFBF;
+    background-color: white;
+    box-shadow: 10px 10px 5px #aaaaaa;
+  }
+  
+  div.rotate_right {
+    float: left;
+    -ms-transform: rotate(7deg); /* IE 9 */
+    -webkit-transform: rotate(7deg); /* Safari */
+    transform: rotate(7deg);
+  }
+  
+  div.rotate_left {
+    float: left;
+    -ms-transform: rotate(-8deg); /* IE 9 */
+    -webkit-transform: rotate(-8deg); /* Safari */
+    transform: rotate(-8deg);
+  }
+  @media only screen and (max-width: 850px) {
+    main {
+        grid-template-columns: 1fr 2fr;
+        grid-template-areas: "h h  "
+                            "n n"
+                              "ar as"  
+                              "f f "   
+        
+        ;
+        width: 80%;
+       
+        margin-left: auto;
+        margin-right: auto;
+    }
+  }
+  @media only screen and (max-width: 600px) {
+    main {
+        grid-template-columns:2fr;
+        grid-template-areas: "h"
+                            "n"
+                              "ar"  
+                              "as"
+                              "f"   
+        
+        ;
+        width: 80%;
+       
+        margin-left: auto;
+        margin-right: auto;
+    }
+  }
